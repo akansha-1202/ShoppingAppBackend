@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const connectDB = require("./config/db");
-// const Router = require("./Routes/route");
+const Router = require("./Routes/route");
 const cors = require("cors");
 // const addProducts = require("./addProducts");
 const app = express();
@@ -20,11 +20,11 @@ app.use(
   })
 );
 app.use(express.json());
-// app.use("/", Router);
+app.use("/api", Router);
 
-app.get("/home", (req, res) => {
-  res.send("Welcome To my Backend...!!!");
-});
+// app.get("/home", (req, res) => {
+//   res.send("Welcome To my Backend...!!!");
+// });
 
 // addProducts();
 
