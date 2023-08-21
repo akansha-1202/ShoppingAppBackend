@@ -26,7 +26,23 @@ const getSingleProductById = async (req, res) => {
   }
 };
 
+
+const getProductsByFilter = async(req,res)=>{
+  try{
+    const brand = req.params.brand;
+ const product = await productModel.find({ brand: brand });
+    res.send(product);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Error while getting a category",
+      error,
+    });
+  }
+}
+
 module.exports = {
   getProducts,
   getSingleProductById,
+  getProductsByFilter
 };
