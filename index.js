@@ -37,3 +37,6 @@ app.listen(PORT, () => {
     console.log(err, "Error occured in running the server");
   }
 });
+
+
+//https://e-com-server-4tx7wd1ou-akansha-1202.vercel.app/
