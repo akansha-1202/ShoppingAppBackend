@@ -1,6 +1,7 @@
 const { register, login } = require("../Controller/userController")
 const { getProducts, getSingleProductById, getProductsByFilter} = require("../Controller/productController");
-const {addToCart, fetchUserCart} = require("../Controller/cartController")
+const {addToCart, fetchUserCart} = require("../Controller/cartController");
+const auth = require("../Middleware/auth");
 const Router = require("express").Router()
 
 Router.post('/register',register)
