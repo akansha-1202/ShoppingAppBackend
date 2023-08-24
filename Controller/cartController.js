@@ -1,5 +1,5 @@
 const productModel = require("../Schema/productModel");
-const cartModel = require("../Schema/cartModel")
+const cartModel = require("../Schema/cartModel");
 
 const addToCart = async (req, res) => {
   const { user_id } = req.body;
@@ -10,7 +10,7 @@ const addToCart = async (req, res) => {
     user_id,
     data,
   });
-  return res.send({ msg: "product added to the cart", result: result });
+  return res.send({ message: "product added to the cart", result: result });
 };
 
 const fetchUserCart = async (req, res) => {
@@ -22,6 +22,6 @@ const fetchUserCart = async (req, res) => {
 // const checkOut = async(req, res) =>{
 
 // }
-module.exports = {addToCart,fetchUserCart}
+module.exports = { addToCart, fetchUserCart };
 // /addToCart/:product_id
 // /fetchUserCart/:user_id

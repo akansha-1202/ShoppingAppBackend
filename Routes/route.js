@@ -10,7 +10,7 @@ Router.get("/products", getProducts);
 Router.get("/products/:brand", getProductsByFilter);
 
 Router.get("/product/:id", getSingleProductById);
-Router.post("/addToCart/:product_id",addToCart);
+Router.post("/addToCart/:id", auth ,addToCart);
 Router.get("/fetchUserCart/:user_id",fetchUserCart)
 
 
