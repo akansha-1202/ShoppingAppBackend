@@ -4,7 +4,7 @@ const cartModel = require("../Schema/cartModel");
 const addToCart = async (req, res) => {
   const { user_id } = req.body;
   const _id = req.params.product_id;
-  const data = await productModel.find({ _id: _id });
+  const data = await productModel.find({ id: _id });
   console.log(data);
   const result = await cartModel.create({
     user_id,
