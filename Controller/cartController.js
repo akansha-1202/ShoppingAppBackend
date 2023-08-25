@@ -19,6 +19,9 @@ const fetchUserCart = async (req, res) => {
   return res.send(user);
 };
 
+
+
+
 // const checkOut = async(req, res) =>{
 
 // }

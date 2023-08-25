@@ -9,7 +9,7 @@ const cart = mongoose.Schema({
     type: Object,
     required: true,
   },
-});
+},{timestamps : true});//for timing in which user added the cart
 
 const cartModel = mongoose.model("cart", cart);
 module.exports = cartModel;
